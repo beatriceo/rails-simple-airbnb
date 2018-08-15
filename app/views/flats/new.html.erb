@@ -1,0 +1,12 @@
+<ul class="alerts">
+  <% if @flat.errors %>
+    <% @flat.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+    <% end %>
+  <% end %>
+</ul>
+
+<div class="container">
+  <h1>Add a new Flat</h1>
+  <%= render 'layouts/form', flat: @flat %>
+</div>
